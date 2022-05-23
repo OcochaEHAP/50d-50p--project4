@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #c31432, #240b36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.search {
+  position: relative;
+  height: 1.3em;
+}
+.search .input {
+  background-color: #fff;
+  transition: width 0.3s ease;
+  border: 0;
+  font-size: 1em;
+  padding: 15px;
+  height: 50px;
+  width: 50px;
+}
+.btn {
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.7em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.btn:focus,
+.input:focus {
+  outline: none;
+}
+.search.active .input {
+  width: 200px;
+}
+.search.active .btn {
+  transform: translateX(198px);
+}
